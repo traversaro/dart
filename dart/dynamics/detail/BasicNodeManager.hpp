@@ -37,6 +37,7 @@
 #include <typeindex>
 #include <unordered_set>
 
+#include "dart/common/ClassWithVirtualBase.hpp"
 #include "dart/common/NameManager.hpp"
 #include "dart/common/Empty.hpp"
 #include "dart/dynamics/Node.hpp"
@@ -89,6 +90,7 @@ protected:
 
 };
 
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_BEGIN
 class BasicNodeManagerForSkeleton : public virtual BasicNodeManagerForBodyNode
 {
 public:
@@ -136,6 +138,7 @@ protected:
   SpecializedTreeNodes mSpecializedTreeNodes;
 
 };
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_END
 
 //==============================================================================
 template <class NodeType>

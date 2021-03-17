@@ -70,8 +70,9 @@ class Marker;
 ///
 /// BodyNode inherits Frame, and a parent Frame of a BodyNode is the parent
 /// BodyNode of the BodyNode.
-class BodyNode :
-    public detail::BodyNodeCompositeBase,
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_BEGIN
+class BodyNode
+  : public detail::BodyNodeCompositeBase,
     public virtual BodyNodeSpecializedFor<ShapeNode, EndEffector, Marker>,
     public SkeletonRefCountingBase,
     public TemplatedJacobianNode<BodyNode>
@@ -1221,6 +1222,7 @@ private:
   std::shared_ptr<NodeDestructor> mSelfDestructor;
 
 };
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_END
 
 }  // namespace dynamics
 }  // namespace dart

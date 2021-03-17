@@ -50,6 +50,7 @@ class InverseKinematics;
 /// The JacobianNode class serves as a common interface for BodyNodes and
 /// EndEffectors to both be used as references for IK modules. This is a pure
 /// abstract class.
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_BEGIN
 class JacobianNode : public virtual Frame, public Node
 {
 public:
@@ -304,6 +305,7 @@ protected:
   std::unordered_set<JacobianNode*> mChildJacobianNodes;
 
 };
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_END
 
 } // namespace dart
 } // namespace dynamics

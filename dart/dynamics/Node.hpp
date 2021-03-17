@@ -78,9 +78,9 @@ private:
 ///
 /// In most cases, when creating your own custom Node class, you will also want
 /// to inherit from AccessoryNode using CRTP.
-class Node :
-    public virtual common::Subject,
-    public virtual common::VersionCounter
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_BEGIN
+class Node : public virtual common::Subject,
+             public virtual common::VersionCounter
 {
 public:
 
@@ -226,6 +226,7 @@ protected:
   /// Index of this Node within its tree
   std::size_t mIndexInTree;
 };
+DART_DECLARE_CLASS_WITH_VIRTUAL_BASE_END
 
 //==============================================================================
 /// AccessoryNode provides an interface for Nodes to get their index within the
