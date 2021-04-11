@@ -86,7 +86,7 @@ add_subdirectory(constraint)
 add_subdirectory(simulation)
 add_subdirectory(planning) # flann
 add_subdirectory(utils) # tinyxml2, bullet
-add_subdirectory(gui) # opengl, glut, bullet
+# add_subdirectory(gui) # opengl, glut, bullet
 
 set(DART_CONFIG_HPP_IN ${DART_SOURCE_DIR}/dart/config.hpp.in)
 set(DART_CONFIG_HPP_OUT ${DART_BINARY_DIR}/dart/config.hpp)
