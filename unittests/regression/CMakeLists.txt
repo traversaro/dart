@@ -6,8 +6,8 @@ if(TARGET dart-utils)
   dart_add_test("regression" test_Issue1583)
   target_link_libraries(test_Issue1583 dart-utils)
 
-  dart_add_test("regression" test_Issue1596)
-  target_link_libraries(test_Issue1596 dart-utils)
+  #dart_add_test("regression" test_Issue1596)
+  #target_link_libraries(test_Issue1596 dart-utils)
 endif()
 
 if(TARGET dart-utils-urdf)
